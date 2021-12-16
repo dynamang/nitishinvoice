@@ -102,8 +102,8 @@ function myFunction(){
 	var opt = {
 		margin: 1,
 		filename: this.document.getElementById("invoice_num").innerText,
-		image: { type: 'jpeg', quality: 0.98 },
-		html2canvas: { scale: 2 },
+		image: { type: 'jpeg', quality: 1 },
+		html2canvas: { scale: 4 },
 		jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
 	};
 	html2pdf().from(invoice).set(opt).save();
