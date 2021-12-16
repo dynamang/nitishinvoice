@@ -94,6 +94,7 @@ function getDateTime2() {
 /* Helper Functions
 /* ========================================================================== */
 function myFunction(){
+		updateInvoice();
 	document.getElementById("invoice_num").innerText =  getDateTime();
 	document.getElementById("date").innerText=getDateTime2();
 	const invoice = this.document.getElementById("invoice");
