@@ -156,14 +156,14 @@ function updateNumber(e) {
 function updateInvoice() {
 	var total = 0;
 	var cells, price, total, a, i;
-
+         var num1=0;
 	// update inventory cells
 	// ======================
 
 	for (var a = document.querySelectorAll('table.inventory tbody tr'), i = 0; a[i]; ++i) {
 		// get inventory row cells
 		cells = a[i].querySelectorAll('span:last-child');
-
+                num1++;
 		// set price as cell[2] * cell[3]
 		price = parseFloatHTML(cells[2]) * parseFloatHTML(cells[3]);
 
@@ -185,13 +185,14 @@ function updateInvoice() {
 
 	// set balance and meta balance
 	cells[2].innerHTML = document.querySelector('table.meta tr:last-child td:last-child span:last-child').innerHTML = parsePrice(total - parseFloatHTML(cells[1]));
-
+cells[3].innerHTML=num1;   
 	// update prefix formatting
 	// ========================
 
 	var prefix = document.querySelector('#prefix').innerHTML;
 	for (a = document.querySelectorAll('[data-prefix]'), i = 0; a[i]; ++i) a[i].innerHTML = prefix;
-
+        document.getElementById("removeSign").innerHTML="";
+	
 	// update price formatting
 	// =======================
 
