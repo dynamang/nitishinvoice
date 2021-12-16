@@ -95,14 +95,14 @@ function getDateTime2() {
 /* ========================================================================== */
 function myFunction(){
 		updateInvoice();
-	document.getElementById("invoice_num").innerText =  getDateTime();
-	document.getElementById("date").innerText=getDateTime2();
+	this.document.getElementById("invoice_num").innerText =  getDateTime();
+	this.document.getElementById("date").innerText=getDateTime2();
 	const invoice = this.document.getElementById("invoice");
 	console.log(invoice);
 	console.log(window);
 	var opt = {
 		margin: 1,
-		filename: this.document.getElementById("invoice_num").innerText,
+		filename: getDateTime(),
 		image: { type: 'jpeg', quality: 1 },
 		html2canvas: { scale: 4 },
 		jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
@@ -115,9 +115,9 @@ function generateTableRow() {
 
 	emptyColumn.innerHTML = '<td><a class="cut">-</a><span contenteditable></span></td>' +
 		'<td><span contenteditable></span></td>' +
-		'<td><span data-prefix>₹</span><span contenteditable>0.00</span></td>' +
+		'<td><span data-prefix>₹</span><span contenteditable>0</span></td>' +
 		'<td><span contenteditable>0</span></td>' +
-		'<td><span data-prefix>₹</span><span>0.00</span></td>';
+		'<td><span data-prefix>₹</span><span>0</span></td>';
 
 	return emptyColumn;
 }
