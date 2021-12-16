@@ -29,7 +29,6 @@
 	cursor: pointer;
   }
 
-  .button2 {background-color: #008CBA;} /* Blue */
 /* content editable */
 
 *[contenteditable] { border-radius: 0.25em; min-width: 1em; outline: 0; }
